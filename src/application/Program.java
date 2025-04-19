@@ -19,7 +19,7 @@ public class Program {
 		
 		DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
 		
-		System.out.println("Enter the rental details: ");
+		System.out.println("Input the rental details: ");
 		System.out.print("Car model: ");
 		String carModel = sc.nextLine();
 		System.out.print("Removal (dd/MM/yyyy hh:mm) : ");
@@ -29,9 +29,9 @@ public class Program {
 		
 		CarRental cr = new CarRental(start, finish, new Vehicle(carModel));
 		
-		System.out.print("Enter the price per hour: ");
+		System.out.print("Input the price per hour: ");
 		double pricePerHour = sc.nextDouble();
-		System.out.print("Enter the price per day: ");
+		System.out.print("Input the price per day: ");
 		double pricePerDay= sc.nextDouble();
 		
 		RentalService rentalService = new RentalService(pricePerHour, pricePerDay, new BrazilTaxService());
